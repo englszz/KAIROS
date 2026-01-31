@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KAIROS</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="clock.png">
+    <link rel="shortcut icon" type="image/png" href="clock.png">
+    <link rel="apple-touch-icon" href="clock.png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <nav>
+        <div class="logo">KAIROS</div>
+        <ul class="nav-links">
+            <li><a href="#historia">Historia</a></li>
+            <li><a href="#coleccion">Colección</a></li>
+            <li><a href="#valores">Valores</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-pattern"></div>
+        <div class="hero-content">
+            <div class="logo-placeholder">
+               <img src="LOGO.png" alt="">
+            </div>
+            <div class="hero-divider"></div>
+            <p class="hero-subtitle">PODER · DINERO · TRADICIÓN</p>
+        </div>
+        <div class="scroll-indicator"></div>
+    </section>
+
+    <section id="historia" class="historia">
+        <h2 class="section-title">NUESTRA HISTORIA</h2>
+        <div class="historia-content">
+            <p>KAIROS nace de una idea simple pero poderosa: el tiempo es el activo más valioso que existe.</p>
+            
+            <p>En un mundo dominado por la prisa y lo desechable, decidimos crear una marca que represente calma, precisión y permanencia. Cada reloj KAIROS es cuidadosamente seleccionado bajo estrictos estándares de calidad, diseño atemporal y durabilidad real.</p>
+            
+            <p class="historia-highlight">No seguimos tendencias pasajeras. Ofrecemos piezas que trascienden generaciones.</p>
+            
+            <p>KAIROS representa a quienes entienden que el éxito no se mide en horas, sino en momentos bien vividos.</p>
+            
+            <p>Cada reloj es un símbolo de disciplina, visión y respeto por el propio camino.</p>
+        </div>
+    </section>
+
+    <section id="coleccion" class="coleccion">
+        <h2 class="section-title">COLECCIÓN</h2>
+        <div class="coleccion-grid">
+            <div class="watch-card" onclick="openModal(1)">
+                <div class="watch-image-placeholder"><img src="1.png" alt=""></div>
+                <h3 class="watch-name">Rolex Daytona</h3>
+                <p class="watch-description">Un icono moderno de ingeniería y velocidad.</p>
+            </div>
+            <div class="watch-card" onclick="openModal(2)">
+                <div class="watch-image-placeholder"><img src="2.png" alt=""></div>
+                <h3 class="watch-name">Rolex Daytona "John Mayer"</h3>
+                <p class="watch-description">La máxima expresión del lujo deportivo y la exclusividad.</p>
+            </div>
+            <div class="watch-card" onclick="openModal(3)">
+                <div class="watch-image-placeholder"><img src="3.png" alt=""></div>
+                <h3 class="watch-name">Rolex Cosmograph Daytona</h3>
+                <p class="watch-description">Poderosa sofisticación en negro profundo y acero.</p>
+            </div>
+            <div class="watch-card" onclick="openModal(4)">
+                <div class="watch-image-placeholder"><img src="4.png" alt=""></div>
+                <h3 class="watch-name">Longines Zulu Time</h3>
+                <p class="watch-description">Herencia aeronáutica para el explorador global.</p>
+            </div>
+            <div class="watch-card" onclick="openModal(5)">
+                <div class="watch-image-placeholder"><img src="5.png" alt=""></div>
+                <h3 class="watch-name">Swatch Irony Chrono</h3>
+                <p class="watch-description">Estilo contemporáneo con alma técnica y ligera.</p>
+            </div>
+            <div class="watch-card" onclick="openModal(6)">
+                <div class="watch-image-placeholder"><img src="6.png" alt=""></div>
+                <h3 class="watch-name">Rolex Explorer 36</h3>
+                <p class="watch-description">La elegancia del oro se une al espíritu de la exploración.</p>
+            </div>
+            <div class="watch-card" onclick="openModal(7)">
+                <div class="watch-image-placeholder"><img src="7.png" alt=""></div>
+                <h3 class="watch-name">Swatch Irony Chrono</h3>
+                <p class="watch-description">Fuerza y precisión en un diseño incombustible.</p>
+            </div>
+            <div class="watch-card" onclick="openModal(8)">
+                <div class="watch-image-placeholder"><img src="8.png" alt=""></div>
+                <h3 class="watch-name">Swatch Irony Chrono</h3>
+                <p class="watch-description">Estética de alta velocidad con un acabado metálico impecable.</p>
+            </div>
+        </div>
+    </section>
+
+    <div id="watchModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal()">&times;</span>
+            <img id="modalImage" class="modal-image" src="" alt="">
+            <h3 id="modalTitle" class="modal-title"></h3>
+            <p id="modalDescription" class="modal-description"></p>
+            <div class="modal-specs">
+                <div class="spec-item">
+                    <div class="spec-label">Movimiento</div>
+                    <div class="spec-value" id="modalMovement"></div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-label">Material</div>
+                    <div class="spec-value" id="modalMaterial"></div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-label">Resistencia</div>
+                    <div class="spec-value" id="modalResistance"></div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-label">Garantía</div>
+                    <div class="spec-value" id="modalWarranty"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="valores" class="valores">
+        <h2 class="section-title">NUESTROS VALORES</h2>
+        <div class="valores-grid">
+            <div class="valor-item">
+                <div class="valor-icon">👑</div>
+                <h3 class="valor-title">PODER</h3>
+                <p class="valor-text">Cada segundo es una oportunidad para dominar tu destino. KAIROS es el símbolo de quienes lideran con autoridad.</p>
+            </div>
+            <div class="valor-item">
+                <div class="valor-icon">💎</div>
+                <h3 class="valor-title">EXCLUSIVIDAD</h3>
+                <p class="valor-text">No para todos, solo para quienes comprenden el verdadero valor de la excelencia y la permanencia.</p>
+            </div>
+            <div class="valor-item">
+                <div class="valor-icon">🏛️</div>
+                <h3 class="valor-title">TRADICIÓN</h3>
+                <p class="valor-text">Heredamos el legado de los grandes maestros relojeros. Cada pieza es un tributo a la artesanía eterna.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="contacto">
+        <h2 class="section-title">DESCUBRE TU KAIROS</h2>
+        <div class="contacto-content">
+            <p class="contacto-text">El tiempo no espera. Únete a quienes entienden que cada momento cuenta y que la excelencia no es negociable.</p>
+            <a href="https://www.instagram.com/edp.web/" class="cta-button">Contactar</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">KAIROS</div>
+            <p class="footer-text">© 2026 KAIROS. El tiempo es poder.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
